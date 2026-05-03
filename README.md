@@ -16,19 +16,21 @@
 ### 1. 安装 Python
 
 需要 Python 3.8 或更高版本。
-官网: https://www.python.org/downloads/
+官网: <https://www.python.org/downloads/>
 
 ### 2. 安装 FFmpeg
 
 Whisper 需要 FFmpeg 来处理音频：
 
 **Windows 用户：**
-1. 下载 FFmpeg: https://github.com/BtbN/FFmpeg-Builds/releases
+
+1. 下载 FFmpeg: <https://github.com/BtbN/FFmpeg-Builds/releases>
 2. 选择 `ffmpeg-master-latest-win64-gpl.zip`
 3. 解压到 `C:\ffmpeg`
 4. 添加 `C:\ffmpeg\bin` 到系统环境变量 PATH
 
 **验证安装：**
+
 ```bash
 ffmpeg -version
 ```
@@ -66,24 +68,26 @@ python main.py
 
 ### 模型选择
 
-- **tiny** - 最快，体积小 (~75MB)，准确率一般
-- **base** - 较快，体积适中 (~140MB)，适合一般使用
-- **small** - 平衡之选 (~450MB)，**推荐**
-- **medium** - 较慢，体积大 (~1.5GB)，准确率高
-- **large** - 最慢，体积最大 (~3GB)，最高准确率
+- **tiny** - 最快，体积小 (\~75MB)，准确率一般
+- **base** - 较快，体积适中 (\~140MB)，适合一般使用
+- **small** - 平衡之选 (\~450MB)，**推荐**
+- **medium** - 较慢，体积大 (\~1.5GB)，准确率高
+- **large** - 最慢，体积最大 (\~3GB)，最高准确率
 
 ### 支持的语言
 
 - 中文 
-
+- 英文
 ## 硬件要求
 
 ### 最低配置
+
 - CPU (可用)
 - 4GB 内存
 - 2GB 硬盘空间
 
 ### 推荐配置
+
 - NVIDIA GPU (CUDA 加速)
 - 8GB+ 内存
 - 5GB 硬盘空间
@@ -113,19 +117,25 @@ c:\Users\Mechrevo\Desktop\VC2010相关\text\
 ## 常见问题
 
 ### Q: 首次运行很慢？
+
 A: 首次使用需要下载模型文件，请耐心等待。
 
 ### Q: 提示找不到模块？
+
 A: 请运行: `pip install -r requirements.txt`
 
 ### Q: 提示找不到 ffmpeg？
+
 A: 请确保已安装 FFmpeg 并添加到系统 PATH 环境变量。
 
 ### Q: 中文路径报错？
+
 A: 程序已内置中文路径处理，如仍有问题请使用英文路径。
 
 ### Q: 如何提高识别速度？
+
 A:
+
 1. 使用较小的模型 (small/medium)
 2. 使用 GPU 加速
 3. 减少线程数
@@ -140,16 +150,20 @@ A:
 
 ## 开源许可
 
-- 本项目: MIT License
-- Whisper: Apache 2.0
-- FFmpeg: LGPL 2.1+
-- PyQt5: GPL/LGPL
+- 本项目：GNU General Public License v3.0 (GPLv3)
+- 第三方库许可证：
+- Whisper: MIT
+- PyTorch: 修改版 BSD
+- FFmpeg: LGPL 2.1+ / GPL（用户自行安装）
+- PyQt5: GPL v3
 
 ## 更新日志
 
 ### v1.0.0 (2026-05-03)
+
 - 初始版本
 - 支持 Whisper 语音识别
 - 支持 SRT 格式导出
 - 可视化界面操作
 - 中文路径自动处理
+
